@@ -39,5 +39,5 @@ flutter icons:
 flutter:
   uses-material-design: true
   assets:
-    - .env
     - images/
+    - .env

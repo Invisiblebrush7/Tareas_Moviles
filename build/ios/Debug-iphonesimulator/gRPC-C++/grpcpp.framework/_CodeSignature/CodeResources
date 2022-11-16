@@ -446,7 +446,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		HcuK9mtlH+AiM0Z8zylfA+q+ro0=
+		h0Z7tDgSudc2y5AqLo1Sx/pKiag=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -3078,27 +3078,7 @@
 		</data>
 		<key>gRPCCertificates-Cpp.bundle/Info.plist</key>
 		<data>
-		erBOqh6Q6R4aXpi77pmGDcpg2bw=
-		</data>
-		<key>gRPCCertificates-Cpp.bundle/_CodeSignature/CodeDirectory</key>
-		<data>
-		X20prDq1zC+3qfhv1AjsPqBELls=
-		</data>
-		<key>gRPCCertificates-Cpp.bundle/_CodeSignature/CodeRequirements</key>
-		<data>
-		OnX22wWFKRSOFN1+obRynMCeyXM=
-		</data>
-		<key>gRPCCertificates-Cpp.bundle/_CodeSignature/CodeRequirements-1</key>
-		<data>
-		xvPBcKAA1v7pExLfdjdoJbZadJM=
-		</data>
-		<key>gRPCCertificates-Cpp.bundle/_CodeSignature/CodeResources</key>
-		<data>
-		lD20QLF41Z6JAfWiAzKftf/Hioo=
-		</data>
-		<key>gRPCCertificates-Cpp.bundle/_CodeSignature/CodeSignature</key>
-		<data>
-		2jmj7l5rSw0yVb/vlWAYkK/YBwk=
+		8cohpr0HK5g9u9V2SHUM9wf3r+A=
 		</data>
 		<key>gRPCCertificates-Cpp.bundle/roots.pem</key>
 		<data>
@@ -11548,66 +11528,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			erBOqh6Q6R4aXpi77pmGDcpg2bw=
+			8cohpr0HK5g9u9V2SHUM9wf3r+A=
 			</data>
 			<key>hash2</key>
 			<data>
-			FnMAvY3eRkgA4dAp173bJoe5szZlQwd4znE66qG5egk=
-			</data>
-		</dict>
-		<key>gRPCCertificates-Cpp.bundle/_CodeSignature/CodeDirectory</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			X20prDq1zC+3qfhv1AjsPqBELls=
-			</data>
-			<key>hash2</key>
-			<data>
-			gZSCq11WTsAzcfElFZuA8bX4X61j/exngNoesYoJcLE=
-			</data>
-		</dict>
-		<key>gRPCCertificates-Cpp.bundle/_CodeSignature/CodeRequirements</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			OnX22wWFKRSOFN1+obRynMCeyXM=
-			</data>
-			<key>hash2</key>
-			<data>
-			mHkgkE6rZQ51eIwFSqCwUk5qgL/HGqMt+NI3phdD+YY=
-			</data>
-		</dict>
-		<key>gRPCCertificates-Cpp.bundle/_CodeSignature/CodeRequirements-1</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			xvPBcKAA1v7pExLfdjdoJbZadJM=
-			</data>
-			<key>hash2</key>
-			<data>
-			77dwbp7woXHTPaA1Q37KcyoIwUaxl2ImxqskqPEgkSk=
-			</data>
-		</dict>
-		<key>gRPCCertificates-Cpp.bundle/_CodeSignature/CodeResources</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			lD20QLF41Z6JAfWiAzKftf/Hioo=
-			</data>
-			<key>hash2</key>
-			<data>
-			rkQT8y7IjYx1BZmWKGvWqc/3aSQ5ZMXvtyNQv/YwsRw=
-			</data>
-		</dict>
-		<key>gRPCCertificates-Cpp.bundle/_CodeSignature/CodeSignature</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			2jmj7l5rSw0yVb/vlWAYkK/YBwk=
-			</data>
-			<key>hash2</key>
-			<data>
-			47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+			+7uCUAWODQSTZMAYsRfUi5dm+zzZ8OGTahp6QSWNJvs=
 			</data>
 		</dict>
 		<key>gRPCCertificates-Cpp.bundle/roots.pem</key>

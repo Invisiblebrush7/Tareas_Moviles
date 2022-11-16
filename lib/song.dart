@@ -9,9 +9,14 @@ class Song {
     return "(${this.title}:${this.author}:${this.songLink})";
   }
 
-  Song(
-      {required this.author,
-      required this.title,
-      required this.imageUrl,
-      required this.songLink});
+  Map<String, dynamic> getSongAsMap() {
+    return {
+      'title': this.title,
+      'imageUrl': this.imageUrl,
+      'author': this.author,
+      'songLink': this.songLink,
+    };
+  }
+
+  Song({required this.author, required this.title, required this.imageUrl, required this.songLink});
 }

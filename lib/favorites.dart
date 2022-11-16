@@ -28,28 +28,29 @@ class _FavsPageState extends State<FavsPage> {
           builder: (context, state) {
             if (state is FavSongsSuccessState) {
               return ListView.builder(
-                  padding: EdgeInsets.all(8.0),
-                  itemCount: state.favSongs.length,
-                  itemBuilder: (context, index) {
-                    return SmallCard(
-                        author: state.favSongs[index].author,
-                        title: state.favSongs[index].title,
-                        imageUrl: state.favSongs[index].imageUrl);
-                  });
-            } else if (state is FavSongsErrorState) {
-              Row(
+                itemCount: state.favSongs.length,
+                itemBuilder: (BuildContext context, int index) {
+                  return SmallCard(
+                    author: state.favSongs[index]["author"],
+                    title: state.favSongs[index]["title"],
+                    imageUrl: state.favSongs[index]["imageUrl"],
+                  );
+                },
+              );
+            } else if (state is FavSongsEmptyState) {
+              return Center(
+                child: Text("Sin favoritos. Trata de agregar alguna canción"),
+              );
+            } else if (state is FavSongsLoadingState) {
+              return CircularProgressIndicator();
+            } else {
+              return Row(
                 children: [
                   Text('Error :('),
                 ],
                 mainAxisAlignment: MainAxisAlignment.center,
               );
             }
-            return Row(
-              children: [
-                Text('Error :('),
-              ],
-              mainAxisAlignment: MainAxisAlignment.center,
-            );
           },
         ),
       ),

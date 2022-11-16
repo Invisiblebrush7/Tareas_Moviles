@@ -51,11 +51,9 @@ class RecorderBloc extends Bloc<RecorderEvent, RecorderState> {
       Song song = Song(
         author: songFound['result']?['artist'] ?? 'No author',
         title: songFound['result']?['title'] ?? 'No Title',
-        imageUrl: songFound['result']?['apple_music']?['artwork']?['url'] ??
-            'No imageUrl',
+        imageUrl: songFound['result']?['apple_music']?['artwork']?['url'] ?? 'No imageUrl',
         songLink: songFound['result']?['song_link'] ?? 'No song link',
       );
-      print(song);
       emit(RecorderSuccessState(song: song));
     }
   }

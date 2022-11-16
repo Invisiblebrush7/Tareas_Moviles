@@ -9,6 +9,7 @@ class UserAuthRepository {
   // true -> go home page
   // false -> go login page
   bool isAlreadyAuthenticated() {
+    print(_auth.currentUser);
     return _auth.currentUser != null;
   }
 
@@ -48,21 +49,29 @@ class UserAuthRepository {
 
   // Metodo para guardar nuevo usuario en la colección "users"
   Future createUserCollectionFirebase(String uid) async {
-    var userDoc = await FirebaseFirestore.instance
-        .collection('userDoctor')
-        .doc(uid)
-        .get();
+    var userDoc = await FirebaseFirestore.instance.collection('users').doc(uid).get();
     if (!userDoc.exists) {
       User? user = FirebaseAuth.instance.currentUser;
-      await FirebaseFirestore.instance.collection('userDoctor').doc(uid).set(
+      await FirebaseFirestore.instance.collection('users').doc(uid).set(
         {
           "name": user!.displayName,
           "email": user.email,
           "address": "No address",
-          "patients": [],
-          "phoneNumber": user.phoneNumber,
+          "favsList": [],
           "profilePicture": user.photoURL,
-          "specialty": "Heart"
+        },
+      );
+    } else {
+      return;
+    }
+  }
+
+  Future createUserCollectionFromCopy(String uid, List<String> newList) async {
+    var userDoc = await FirebaseFirestore.instance.collection('users').doc(uid).get();
+    if (userDoc.exists) {
+      await FirebaseFirestore.instance.collection('users').doc(uid).update(
+        {
+          "favsList": newList,
         },
       );
     } else {

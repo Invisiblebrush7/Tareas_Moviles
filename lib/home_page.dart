@@ -3,6 +3,8 @@
 //import 'dart:typed_data';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:practica_2/auth/bloc/google_auth_bloc.dart';
+import 'package:practica_2/bloc/fav_songs_bloc.dart';
 import 'package:practica_2/bloc/recorder_bloc.dart';
 import 'package:practica_2/favorites.dart';
 import 'package:practica_2/song.dart';
@@ -44,8 +46,7 @@ class _HomePageState extends State<HomePage> {
                   if (state is RecorderInitial) {
                     return GestureDetector(
                       onTap: () async {
-                         BlocProvider.of<RecorderBloc>(context)
-                          ..add(StartRecordingEvent());
+                        BlocProvider.of<RecorderBloc>(context)..add(StartRecordingEvent());
                       },
                       child: CircleAvatar(
                         minRadius: 50.0,
@@ -89,13 +90,17 @@ class _HomePageState extends State<HomePage> {
                 children: [
                   MaterialButton(
                     color: Colors.white,
-                    child: Text("Ver Favoritos",
-                        style: TextStyle(color: Colors.black)),
+                    child: Text("Ver Favoritos", style: TextStyle(color: Colors.black)),
                     onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const FavsPage()));
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => const FavsPage()));
+                      BlocProvider.of<FavSongsBloc>(context)..add(GetAllFavsEvent());
+                    },
+                  ),
+                  MaterialButton(
+                    color: Colors.white,
+                    child: Text("Cerrar Sesión", style: TextStyle(color: Colors.black)),
+                    onPressed: () {
+                      BlocProvider.of<GoogleAuthBloc>(context)..add(SignOutGoogleAuthEvent());
                     },
                   ),
                 ],

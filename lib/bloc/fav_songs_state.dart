@@ -10,7 +10,7 @@ abstract class FavSongsState extends Equatable {
 class FavSongsInitial extends FavSongsState {}
 
 class FavSongsSuccessState extends FavSongsState {
-  final List<Song> favSongs;
+  final List<dynamic> favSongs;
 
   FavSongsSuccessState({required this.favSongs});
 
